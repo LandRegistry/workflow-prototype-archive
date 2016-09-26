@@ -1,0 +1,84 @@
+<script src="/assets/1266583749/v1/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.min.js"></script>
+           <script src="/assets/1266583749/v1/js/application.js"></script>
+
+           <style>
+           .form input[type="radio"] {
+             margin-right: 0.25em;
+             vertical-align: 2px; }
+
+           .alert-warning {
+             border: 3px solid #df3034;
+             box-sizing: border-box;
+             padding: 1em 1em 1em 1em;
+             background-color: #fef7f7;
+             list-style:none;
+           }
+
+           .alert-warning li {
+             margin:0em;
+           	line-height:1em;
+           }
+
+           </style>
+             
+
+           {% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+
+
+      <h1 class="heading-xlarge">My Worklist</h1>
+
+      <p>
+                   <a class="add button js-form-popup" data-form="donor" href="/lpa/54771805330/donor/add" role="button">Add donor details</a>
+               </p>
+
+  <div class="column-three-quarters">
+      <table>
+  <thead>
+    <tr>
+      <th>Title Number</th>
+      <th>ABR</th>
+      <th>Type</th>
+      <th>Attachments</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DN1234</td>
+      <td>A123ABC</td>
+      <td>Dealing</td>
+      <td><a href="files/AP1">View all</a>
+      <br>View list</td>
+    </tr>
+</tbody>
+</table>
+</div>
+  <div class="column-two-thirds">
+    <!--<p class="text">
+          By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        </p>
+-->
+    <br>
+      <p>
+        <a class="button button-start" href="#" role="button">Open ></a> Return
+      </p>
+
+
+    </div>
+  </div>
+</main>
+
+
+
+
+
+{% endblock %}
