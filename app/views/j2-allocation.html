@@ -1,26 +1,19 @@
-<script src="/assets/1266583749/v1/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.min.js"></script>
-           <script src="/assets/1266583749/v1/js/application.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#dialog" ).dialog();
+} );
+</script>
+</head>
+<body>
 
-           <style>
-           .form input[type="radio"] {
-             margin-right: 0.25em;
-             vertical-align: 2px; }
+<div id="dialog" title="Basic dialog">
+<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
 
-           .alert-warning {
-             border: 3px solid #df3034;
-             box-sizing: border-box;
-             padding: 1em 1em 1em 1em;
-             background-color: #fef7f7;
-             list-style:none;
-           }
-
-           .alert-warning li {
-             margin:0em;
-           	line-height:1em;
-           }
-
-           </style>
-             
 
            {% extends "layout.html" %}
 
