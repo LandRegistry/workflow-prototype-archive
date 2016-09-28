@@ -7,6 +7,18 @@
 
 {% block content %}
 
+<style type="text/css">
+.my-thing {
+  max-height: 400px;
+  overflow: scroll;
+  border: 1px solid #bfc1c3;
+  overflow-y: scroll; height: 101%;;
+}
+.my-thing-inner {
+  padding: 30px;
+}
+</style>
+
 <main id="content" role="main">
   <div class="grid-row">
 
@@ -18,7 +30,7 @@
 
   <div class="column-three-quarters">
       <table>
-  <thead>
+ <thead>
     <tr>
       <th>Title Number</th>
       <th>ABR</th>
@@ -27,6 +39,8 @@
       <th>  </th>
     </tr>
   </thead>
+
+
   <tbody>
     <tr>
       <td>DN1234</td>
@@ -41,9 +55,14 @@
     </tr>
 </tbody>
 </table>
+
+
 <h2 class="heading-medium">Attachments for DN1234</h2>
-<form>
+<form class="my-thing">
+
+<div class="my-thing-inner">
       <table>
+
   <thead>
     <tr>
       <th><input type="checkbox" class="form-control" id="full-name"> </th>
@@ -54,6 +73,8 @@
       <th>  </th>
     </tr>
   </thead>
+
+
   <tbody>
     <tr>
       <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
@@ -102,10 +123,12 @@
       <td>02/07/2016 - 10:23:52</td>
       <td>No</td>
     </tr>
-</tbody>
-</table>
+  </tbody>
+  </table>
+</div>
 </form>
 </div>
+
   <div class="column-two-thirds">
     <!--<p class="text">
           By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
