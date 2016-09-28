@@ -13,14 +13,35 @@
   overflow: scroll;
   border: 1px solid #bfc1c3;
   overflow-y: scroll; height: 101%;;
-}
+
 .my-thing-inner {
   padding: 30px;
 }
 </style>
 
+<style type="text/css">
+.newflag {
+  display: inline;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+position: relative;
+top: -7px;
+right:2px;
+padding: 0 1px 0 0;
+border: none;
+font: normal 13px/1 "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+color: red;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+-webkit-transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
+transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
+}
+</style>
+
 <main id="content" role="main">
   <div class="grid-row">
+
 
 
       <h1 class="heading-xlarge">My Worklist</h1>
@@ -46,12 +67,12 @@
       <td>DN1234</td>
       <td>A123ABC</td>
       <td>Dealing</td>
-      <td><a href="#" onclick="window.open('j2-all', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=700,width=920,centerscreen=yes,modal=yes,alwaysRaised=yes')">View all</a>
+      <td><a href="#" onclick="window.open('j2-all', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=700,width=940,centerscreen=yes,modal=yes,alwaysRaised=yes')">View all</a>
 
       <!--<br><a href="#" onclick="window.open('j203-list', 'list', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=1050,width=800,centerscreen=yes,modal=yes,alwaysRaised=yes')">View list</a></td>
 -->
 <br><a href="j202-allocation-min.html">Close list</a></td>
-      <td><a href="#" onclick="window.open('j2-genenq.html', 'ge', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=777,width=920,centerscreen=yes,modal=yes,alwaysRaised=yes')">More info</a></td>
+      <td><a href="#" onclick="window.open('j2-genenq.html', 'ge', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=777,width=1280,centerscreen=yes,modal=yes,alwaysRaised=yes')">More info</a></td>
     </tr>
 </tbody>
 </table>
@@ -79,23 +100,23 @@
     <tr>
       <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
       <td>AP1 Application to change the register</td>
-      <td>1 - Certified - AP1 Application to change the register.pdf</td>
+      <td><div class="newflag">New</div><a href="#" onclick="window.open('j2-all', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=700,width=940,centerscreen=yes,modal=yes,alwaysRaised=yes')">1 - Certified - AP1 Application to change the register.pdf</a></td>
       <td>08/07/2016 - 10:23:52</td>
-      <td>No</td>
+      <td>Unviewed</td>
     </tr>
     <tr>
       <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
       <td>Charge</td>
-      <td>2 - Certified by another - charge.pdf</td>
+      <td><div class="newflag">New</div>2 - Certified by another - charge.pdf</td>
       <td>08/07/2016 - 10:23:52</td>
-      <td>No</td>
+      <td>Unviewed</td>
     </tr>
     <tr>
       <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
       <td>Charge</td>
-      <td>3 - Certified by another - charge.pdf</td>
+      <td><div class="newflag">New</div>3 - Certified by another - charge.pdf </td>
       <td>08/07/2016 - 10:23:52</td>
-      <td>No</td>
+      <td>Unviewed</td>
     </tr>
     <thead>
       <tr>
@@ -107,21 +128,21 @@
       <td>RX1 Restriction</td>
       <td>4 - Certified - RX1 Restriction.pdf</td>
       <td>02/07/2016 - 10:23:52</td>
-      <td>No</td>
+      <td>Viewed</td>
     </tr>
     <tr>
       <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
       <td>Evidence</td>
       <td>5 - Certified - Evidence.pdf</td>
       <td>02/07/2016 - 10:23:52</td>
-      <td>No</td>
+      <td>Viewed</td>
     </tr>
     <tr>
       <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
       <td>Requisition</td>
       <td>6 - Not Certified - Requistion Reply.pdf</td>
       <td>02/07/2016 - 10:23:52</td>
-      <td>No</td>
+      <td>Viewed</td>
     </tr>
   </tbody>
   </table>
