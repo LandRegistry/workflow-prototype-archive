@@ -2,43 +2,37 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-  
+
   res.render('index');
 
 });
 
+/**
+ * Expose variables to all routes
+ */
+router.use(function (req, res, next) {
+  // Pass the entire session through to the frontend
+  // We dont have session. Yet...
+  // res.locals.session = req.session;
 
-// Example routes - feel free to delete these
+  res.locals.data = {};
 
-// Passing data into a page
-
-router.get('/examples/template-data', function (req, res) {
-
-  res.render('examples/template-data', { 'name' : 'Foo' });
-
-});
-
-// Branching
-
-router.get('/examples/over-18', function (req, res) {
-
-  // get the answer from the query string (eg. ?over18=false)
-  var over18 = req.query.over18;
-
-  if (over18 == "false"){
-
-    // redirect to the relevant page
-    res.redirect("/examples/under-18");
-
-  } else {
-
-    // if over18 is any other value (or is missing) render the page requested
-    res.render('examples/over-18');
-
+  // get
+  for(var item in req.query) {
+    if(req.query.hasOwnProperty(item)) {
+      res.locals.data[item] = req.query[item];
+    }
   }
 
-});
+  // post
+  for(var item in req.body) {
+    if(req.body.hasOwnProperty(item)) {
+      res.locals.data[item] = req.body[item];
+    }
+  }
 
-// add your routes here
+  next();
+
+});
 
 module.exports = router;
