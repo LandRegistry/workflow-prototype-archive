@@ -7,16 +7,6 @@
 
 {% block content %}
 
-<script>
-function toggle(source) {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i] != source)
-            checkboxes[i].checked = source.checked;
-    }
-}
-</script>
-
 <style type="text/css">
 .my-thing {
   max-height: 400px;
@@ -50,6 +40,8 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
 }
 
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <main id="content" role="main">
   <div class="grid-row">
@@ -89,9 +81,10 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
 
 
 <h2 class="heading-medium">Attachments for DN1234</h2>
-<form class="my-thing">
+<button onclick="open_win()" id="openSelected">open selected</button>
+<form class="my-thing" id="checkBoxForm">
 
-<div class="my-thing-inner">
+<div class="my-thing-inner" id="my-thing-inner">
       <table>
   <thead>
     <tr>
@@ -106,53 +99,55 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
 
 
   <tbody>
-    <tr>
-      <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
-      <td>AP1 Application to change the register</td>
-      <td><a href="#" onclick="window.open('j2-single?filename=ap1.pdf', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=800,width=1000,centerscreen=yes,modal=yes,alwaysRaised=yes')">1 - Certified - AP1 Application to change the register.pdf</a></td>
-      <td>08/07/2016 - 10:23:52</td>
-      <td>Viewed</td>
-    </tr>
-    <tr>
-      <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
-      <td>Charge</td>
-      <td><a href="#" onclick="window.open('j2-single?filename=Mortgage_Deed.pdf', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=700,width=1000,centerscreen=yes,modal=yes,alwaysRaised=yes')">2 - Certified by another - charge.pdf</a></td>
-      <td>08/07/2016 - 10:23:52</td>
-      <td>Viewed</td>
-    </tr>
-    <tr>
-      <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
-      <td>Charge</td>
-      <td>3 - Certified by another - charge.pdf </td>
-      <td>08/07/2016 - 10:23:52</td>
-      <td>Viewed</td>
-    </tr>
-    <thead>
+    <fieldset>
       <tr>
-        <th>Additional Attachments</th>
+        <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
+        <td>AP1 Application to change the register</td>
+        <td><a href="#" onclick="window.open('j2-single?filename=ap1.pdf', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=800,width=1000,centerscreen=yes,modal=yes,alwaysRaised=yes')">1 - Certified - AP1 Application to change the register.pdf</a></td>
+        <td>08/07/2016 - 10:23:52</td>
+        <td>Viewed</td>
       </tr>
-    </thead>
-    <tr>
-      <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
-      <td>RX1 Restriction</td>
-      <td><div class="newflag">New</div><a href="#" onclick="window.open('j2-single?filename=Prototype_RX1.pdf', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=700,width=1000,centerscreen=yes,modal=yes,alwaysRaised=yes')">4 - Certified - RX1 Restriction.pdf</a></td>
-      <td>02/08/2016 - 14:27:31</td>
-      <td>Unviewed</td>
-    </tr>
-    <tr>
-      <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
-      <td>Evidence</td>
-      <td><div class="newflag">New</div>5 - Certified - Evidence.pdf</td>
-      <td>02/08/2016 - 14:27:31</td>
-      <td>Unviewed</td>
-    </tr>
-    <tr>
-      <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
-      <td>Requisition</td>
-      <td><div class="newflag">New</div>6 - Not Certified - Requistion Reply.pdf</td>
-      <td>02/08/2016 - 14:27:31</td>
-      <td>Unviewed</td>
-    </tr>
+      <tr>
+        <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
+        <td>Charge</td>
+        <td><a href="#" onclick="window.open('j2-single?filename=Mortgage_Deed.pdf', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=700,width=1000,centerscreen=yes,modal=yes,alwaysRaised=yes')">2 - Certified by another - charge.pdf</a></td>
+        <td>08/07/2016 - 10:23:52</td>
+        <td>Viewed</td>
+      </tr>
+      <tr>
+        <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
+        <td>Charge</td>
+        <td>3 - Certified by another - charge.pdf </td>
+        <td>08/07/2016 - 10:23:52</td>
+        <td>Viewed</td>
+      </tr>
+      <thead>
+        <tr>
+          <th>Additional Attachments</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
+        <td>RX1 Restriction</td>
+        <td><div class="newflag">New</div><a href="#" onclick="window.open('j2-single?filename=Prototype_RX1.pdf', 'all', 'menubar=no,location=no,resizable=no,scrollbars=yes,status=no,height=700,width=1000,centerscreen=yes,modal=yes,alwaysRaised=yes')">4 - Certified - RX1 Restriction.pdf</a></td>
+        <td>02/08/2016 - 14:27:31</td>
+        <td>Unviewed</td>
+      </tr>
+      <tr>
+        <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
+        <td>Evidence</td>
+        <td><div class="newflag">New</div>5 - Certified - Evidence.pdf</td>
+        <td>02/08/2016 - 14:27:31</td>
+        <td>Unviewed</td>
+      </tr>
+      <tr>
+        <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
+        <td>Requisition</td>
+        <td><div class="newflag">New</div>6 - Not Certified - Requistion Reply.pdf</td>
+        <td>02/08/2016 - 14:27:31</td>
+        <td>Unviewed</td>
+      </tr>
+    </fieldset>
   </tbody>
   </table>
 </div>
@@ -174,8 +169,47 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
   </div>
 </main>
 
+<script>
 
+function toggle(source) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source)
+            checkboxes[i].checked = source.checked;
+    }
+}
 
+var form = document.getElementById('my-thing-inner');
+
+var boxes = form.getElementsByTagName('input');
+
+for (var i=0, len=boxes.length; i<len; i++) {
+  boxes[i].checked = buttonDisplay();
+}
+
+function buttonDisplay() {
+
+  console.log("display")
+
+  var anyChecked = false;
+
+  for (var i=0, len=boxes.length; i<len; i++) {
+    if (boxes[i].checked) {
+      anyChecked = true;
+    }
+  }
+
+  if (anyChecked = false) {
+    console.log('hide')
+    document.getElementById('openSelected').style.visibility = "hidden";
+  }
+  else {
+    document.getElementById('openSelected').style.visibility = "visible";
+  }
+
+}
+
+</script>
 
 
 {% endblock %}
