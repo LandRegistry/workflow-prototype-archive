@@ -88,7 +88,7 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
       <table>
   <thead>
     <tr>
-      <th><input type="checkbox" onclick="toggle(this);" class="form-control" id="all-boxes"> </th>
+      <th><input type="checkbox"  class="form-control" id="all-boxes"> </th>
       <th>Type</th>
       <th>Name</th>
       <th>Date and time</th>
@@ -99,7 +99,7 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
 
 
   <tbody>
-    <fieldset>
+    <fieldset id='checkboxes'>
       <tr>
         <td>  <input type="checkbox" class="form-control" id="full-name"> </td>
         <td>AP1 Application to change the register</td>
@@ -171,21 +171,20 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
 
 <script>
 
-function toggle(source) {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i] != source)
-            checkboxes[i].checked = source.checked;
-    }
-}
+$( document ).ready(function() {
 
-var form = document.getElementById('my-thing-inner');
+    console.log($('.form-control'))
 
-var boxes = form.getElementsByTagName('input');
+    $('.form-control').change( function(){
 
-for (var i=0, len=boxes.length; i<len; i++) {
-  boxes[i].checked = buttonDisplay();
-}
+      console.log("checked")
+
+      $('.form-control').each(function(index, element) {
+        buttonDisplay();
+      })
+
+    });
+  });
 
 function buttonDisplay() {
 
@@ -199,12 +198,13 @@ function buttonDisplay() {
     }
   }
 
-  if (anyChecked = false) {
+  if (anyChecked == false) {
     console.log('hide')
-    document.getElementById('openSelected').style.visibility = "hidden";
+    $("#openSelected").hide();
   }
   else {
-    document.getElementById('openSelected').style.visibility = "visible";
+    console.log('show')
+    $("#openSelected").show();
   }
 
 }
