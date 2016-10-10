@@ -107,7 +107,7 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
 
 
 <h2 class="heading-medium">Attachments for DN1234</h2>
-<button id="openSelected" style="display: none;" class="button-secondary">Toggle viewed status</button>
+<button id="openSelected" class="button-secondary">Toggle viewed status</button>
 <form class="my-thing" id="checkBoxForm">
 
 <div class="my-thing-inner" id="my-thing-inner">
@@ -200,6 +200,8 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
 
 $( document ).ready(function() {
 
+      $("#openSelected").css('visibility', 'hidden');
+
       $('#checkboxes :input').each(function(index, element) {
         console.log("HERE")
         console.log($(this).val())
@@ -218,10 +220,10 @@ $( document ).ready(function() {
       })
 
       if (anyChecked == false) {
-        $("#openSelected").hide();
+        $("#openSelected").css('visibility', 'hidden');
       }
       else {
-        $("#openSelected").show();
+        $("#openSelected").css('visibility', 'visible');
       }
 
     });
