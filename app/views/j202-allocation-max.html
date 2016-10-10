@@ -13,10 +13,36 @@
   overflow: scroll;
   border: 1px solid #bfc1c3;
   overflow-y: scroll; height: 101%;;
-  box-shadow: inset -5px -45px 0px -5px rgba(130,130,130,0.5);
+  box-shadow: inset -5px -12px 0px -5px rgba(130,130,130,0.5);
 
 .my-thing-inner {
   padding: 30px;
+}
+</style>
+
+<style>
+.button-secondary {
+ background-color: #dee0e2 ;
+ position: relative;
+ left:400px; top:-45px;
+ display: -moz-inline-stack;
+ display: inline-block;
+ padding: .526315em .789473em .263157em;
+ border: none;
+ -webkit-border-radius: 0;
+ -moz-border-radius: 0;
+ border-radius: 0;
+ -webkit-appearance: none;
+ -webkit-box-shadow: 0 2px 0 #b5babe ;
+ -moz-box-shadow: 0 2px 0 #b5babe ;
+ box-shadow: 0 2px 0 #b5babe ;
+ font-size: 1em;
+ line-height: 1.25;
+ text-decoration: none;
+ -webkit-font-smoothing: antialiased;
+ cursor: pointer;
+ color: #0b0c0c ;
+ padding: 0.5263157895em 0.7894736842em 0.2631578947em 0.7894736842em;
 }
 </style>
 
@@ -81,15 +107,16 @@ transform: rotateX(-30.939720937064457deg) rotateY(13.178029288008933deg)   ;
 
 
 <h2 class="heading-medium">Attachments for DN1234</h2>
-<button id="openSelected" hidden>open selected</button>
+<button id="openSelected" style="display: none;" class="button-secondary">Toggle viewed status</button>
 <form class="my-thing" id="checkBoxForm">
 
 <div class="my-thing-inner" id="my-thing-inner">
       <table>
   <thead>
     <tr>
-      <th><input type="checkbox"  class="form-control" id="all-boxes"> </th>
-      <th>Type</th>
+    <th><!-- <input type="checkbox" onclick="toggle(this);" class="form-control" id="all-boxes">--></th>
+
+    <th>Type</th>
       <th>Name</th>
       <th>Date and time</th>
       <th>Viewed</th>
