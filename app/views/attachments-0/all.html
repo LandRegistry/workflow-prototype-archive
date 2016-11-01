@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GE
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+  #global-header,
+  #footer,
+  #global-header-bar {
+    display: none;
+  }
+  #content {
+    padding: 0px;
+  }
+</style>
+
+<style>
+ .margin {
+   align: left;
+   margin: 0 auto;
+   border: 0px solid red;
+ }
+</style>
+
+<main id="content" role="main">
+
+<img class="margin" src="/public/images/all.png" width="900">
+</main>
+
+{% endblock %}

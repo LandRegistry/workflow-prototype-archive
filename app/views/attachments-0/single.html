@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GE
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+  #global-header,
+  #footer,
+  #global-header-bar {
+    display: none;
+  }
+
+  #content {
+    padding: 0px;
+  }
+</style>
+
+
+
+<embed src="/public/files/{{ data.filename }}" width="1000" height="700" type='application/pdf'>
+
+
+{% endblock %}
