@@ -43,3 +43,34 @@
   line-height: 60px;
   margin-left: 15px;
 }
+
+.content-wrapper {
+    padding-top: 20px;
+}
+
+.column-third {
+    padding-bottom: 20px;
+}
+
+.my-div {
+  padding: 5px;
+    background-color: #bfbfbf;
+  height: 250px;
+}
+
+a.fill-div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+    color: #000;
+    line-height: 250px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.big {
+  width: 25px;
+  height: 25px;
+}
+

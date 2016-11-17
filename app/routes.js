@@ -35,4 +35,109 @@ router.use(function (req, res, next) {
 
 });
 
+  var items = [
+    {
+      'titleno':'DN31258',
+      'abr': 'AC08178',
+      'state': 'allocated',
+      'caseworker': 'John Smith'
+    },
+    {
+      'titleno':'DN95674',
+      'abr': 'AA16893',
+      'state': 'unallocated',
+      'caseworker': null
+    },
+    {
+      'titleno':'DN72309',
+      'abr': 'AG13851',
+      'state': 'Deferred',
+      'caseworker': 'Mary Smith'
+    },
+    {
+      'titleno':'DN10501',
+      'abr': 'AG15172',
+      'state': 'Deferred',
+      'caseworker': 'Jack Jones'
+    }
+  ]
+
+router.get('/search/results_return', function (req, res) {
+
+  // get the titleNo and abr passed in
+  var titleNo = req.query.titleNo;
+  var abr = req.query.abr;
+
+  // results, first is allocated to John smith, second is
+  // unallocated, third is tied to the second, third is tied
+  // to the first and fifth is unallocated on its own
+
+  result = null
+
+  for (i = 0; i < items.length; i++) {
+    if ((abr == items[i]['abr']) && (titleNo == items[i]['titleno'])) {
+
+      result = items[i];
+
+      if (items[i]['caseworker'] == null) {
+        result['caseworker'] = 'N/A'
+      }
+
+    }
+  }
+
+  res.render('search/results_return', {'result': result});
+
+});
+
+router.get('/search/results_obtain', function (req, res) {
+
+  // get the titleNo and abr passed in
+  var titleNo = req.query.titleNo;
+  var abr = req.query.abr;
+
+  // results, first is allocated to John smith, second is
+  // unallocated, third is tied to the second, third is tied
+  // to the first and fifth is unallocated on its own
+
+  result = null
+
+  for (i = 0; i < items.length; i++) {
+    if ((abr == items[i]['abr']) && (titleNo == items[i]['titleno'])) {
+
+      result = items[i];
+
+      if (items[i]['caseworker'] == null) {
+        result['caseworker'] = 'N/A'
+      }
+
+    }
+  }
+
+  res.render('search/results_obtain', {'result': result});
+
+});
+
+router.get('/search/result_worklist', function (req, res) {
+
+  var titleNo = req.query.titleNo;
+  var abr = req.query.ABR;
+
+  item = {
+    'titleNo': titleNo,
+    'abr': abr
+  }
+
+  res.render('search/result_worklist', {'item': item});
+
+});
+
+router.get('/search/return', function (req, res) {
+
+  var titleNo = req.query.titleNo;
+
+  res.render('search/return', {'titleNo': titleNo});
+
+});
+
 module.exports = router;

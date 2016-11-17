@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Cora Redirection
+{% endblock %}
+
+{% block content %}
+
+    <main id='content' role='main'>
+
+        <h1 class="heading-large">
+            Results
+        </h1>
+
+        <form style id="process_form" action="result_worklist">
+
+            {% if result %}
+
+                <table class="form-group">
+
+                    <thead>
+                      <tr>
+                        <th>Title Number</th>
+                        <th>ABR</th>
+                        <th>Type</th>
+                        <th>State</th>
+                        <th>Caseworker</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td id='titleno'>{{ result['titleno'] }}</td>
+                        <td id='ABR'>{{ result['abr'] }}</td>
+                        <td id='Type'>DLG</td>
+                        <td id='State'>{{ result['state'] }}</td>
+                        <td id='Caseworker'>{{ result['caseworker'] }}</td>
+                    </tr>
+
+                    <input type="hidden" name="titleNo" value="{{ result['titleno'] }}">
+                    <input type="hidden" name="ABR" value="{{ result['abr'] }}">
+
+                    </tbody>
+
+                </table>
+
+            {% else %}
+
+                <div class="govuk-box-highlight">
+                    <h1 class="bold-large">No results</h1>
+                    <p>
+                        No results were found for the criteria you entered
+                    </p>
+                </div>
+
+            {% endif %}
+
+            <div class="form-group" >
+                <fieldset class="inline">
+
+                    {% if result %}
+                        <input type="submit" id="main_action" class="button" value="Obtain" {% if result['caseworker'] != 'N/A' %} style="display: none;" {% endif %}/>
+                    {% endif %}
+
+                    <a href="search_obtain">Search again</a>
+
+                </fieldset>
+
+            </div>
+
+        </form>
+
+    </main>
+
+{% endblock %}

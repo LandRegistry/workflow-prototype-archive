@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Results
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <a class="link-back" href="homepage_return">Back</a>
+
+    <form action="results_return" class="form">
+
+        <h1 class="form-title heading-large">
+        Search
+        </h1>
+
+        <!-- Title Number -->
+        <div class="form-group">
+            <label class="form-label-bold" for="full-name">Title Number</label>
+            <input type="text" name="titleNo" class="form-control" id="titleno">
+        </div>
+
+        <!-- ABR -->
+        <div class="form-group">
+            <label class="form-label-bold" for="ni-number">ABR</label>
+            <input type="text" name= "abr" class="form-control" id="abr">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Search">
+        </div>
+
+    </form>
+
+</main>
+
+
+{% endblock %}

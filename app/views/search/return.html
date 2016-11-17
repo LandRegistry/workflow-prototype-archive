@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Cora Redirection
+{% endblock %}
+
+{% block content %}
+
+<main id='content' role='main'>
+
+    <h1 class="heading-large">
+        Reason for returning Title Number {{ titleNo }}
+    </h1>
+
+    <form action="search_return">
+      <fieldset>
+
+        <legend class="visuallyhidden">Reason for returning Title Number {{ titleNo }}</legend>
+
+        <label class="block-label" for="radio-1">
+          <input id="radio-1" type="radio" name="return_reason_code" value="REQN" checked="checked">
+          Requisition required
+        </label>
+        <label class="block-label" for="radio-2">
+          <input id="radio-2" type="radio" name="return_reason_code" value="NOTC">
+          Notice required
+        </label>
+        <label class="block-label" for="radio-3">
+          <input id="radio-3" type="radio" name="return_reason_code" value="OS">
+          Prior search
+        </label>
+        <label class="block-label" for="radio-4">
+          <input id="radio-4" type="radio" name="return_reason_code" value="INC">
+          Inconsistencies
+        </label>
+        <label class="block-label" for="radio-5">
+          <input id="radio-5" type="radio" name="return_reason_code" value="REFER">
+          Referral required
+        </label>
+
+      </fieldset>
+
+      <p></p>
+
+      <input type="submit" value="Return" class="button">
+
+    </form>
+
+</main>
+
+{% endblock %}
