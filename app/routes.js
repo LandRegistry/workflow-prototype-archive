@@ -39,13 +39,13 @@ router.use(function (req, res, next) {
     {
       'titleno':'DN31258',
       'abr': 'AC08178',
-      'state': 'allocated',
+      'state': 'Allocated',
       'caseworker': 'John Smith'
     },
     {
       'titleno':'DN95674',
       'abr': 'AA16893',
-      'state': 'unallocated',
+      'state': 'Unallocated',
       'caseworker': null
     },
     {
