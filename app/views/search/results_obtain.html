@@ -60,7 +60,8 @@
                 <fieldset class="inline">
 
                     {% if result %}
-                        <input type="submit" id="main_action" class="button" value="Obtain" {% if result['caseworker'] != 'N/A' %} style="display: none;" {% endif %}/>
+                        <input type="submit" id="main_action" class="button" value="Obtain"
+                        {% if result['state'] == 'Allocated' %} style="display: none;" {% endif %}/>
                     {% endif %}
 
                     <a href="search_obtain">Search again</a>

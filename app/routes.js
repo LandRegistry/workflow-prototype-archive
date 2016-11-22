@@ -65,8 +65,8 @@ router.use(function (req, res, next) {
 router.get('/search/results_return', function (req, res) {
 
   // get the titleNo and abr passed in
-  var titleNo = req.query.titleNo;
-  var abr = req.query.abr;
+  var titleNo = req.query.titleNo.toUpperCase();
+  var abr = req.query.abr.toUpperCase();
 
   // results, first is allocated to John smith, second is
   // unallocated, third is tied to the second, third is tied
@@ -93,8 +93,8 @@ router.get('/search/results_return', function (req, res) {
 router.get('/search/results_obtain', function (req, res) {
 
   // get the titleNo and abr passed in
-  var titleNo = req.query.titleNo;
-  var abr = req.query.abr;
+  var titleNo = req.query.titleNo.toUpperCase();
+  var abr = req.query.abr.toUpperCase();
 
   // results, first is allocated to John smith, second is
   // unallocated, third is tied to the second, third is tied
@@ -103,7 +103,8 @@ router.get('/search/results_obtain', function (req, res) {
   result = null
 
   for (i = 0; i < items.length; i++) {
-    if ((abr == items[i]['abr']) && (titleNo == items[i]['titleno'])) {
+
+    if ((abr === items[i]['abr']) && (titleNo === items[i]['titleno'])) {
 
       result = items[i];
 

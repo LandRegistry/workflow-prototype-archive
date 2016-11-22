@@ -61,7 +61,9 @@
 
                 {% if result %}
 
-                    <input type="submit" id="main_action" class="button" value="Return" {% if result['caseworker'] != 'N/A' %} style="display: none;" {% endif %}/>
+                    <input type="submit" id="main_action" class="button" value="Return"
+                    {% if result['state'] == 'Allocated' %} style="display: none;" {% endif %}
+                    />
 
                 {% endif %}
 
