@@ -69,7 +69,7 @@
               DLG
             </td>
             <td>
-              <form style ='float: left; padding: 5px;' id="open_ENQ" action="cslk:titleno={{item['lr_ref_number']}}&appnref={{item['lr_work_ref']}}&appntype=ENQ" method="post">
+              <form id="open_ENQ" action="cslk:titleno={{item['lr_ref_number']}}&appnref={{item['lr_work_ref']}}&appntype=ENQ" method="post">
                   <a href="javascript:document.getElementById('open_ENQ').submit();">More info</a>
                 </form>
             </td>
@@ -87,7 +87,7 @@
           <input type="submit" id="main_action" class="button" value="Open"/>
         </form>
 
-        <a href="return-option?work_item_id={{work_items[0]['work_item_id']}}&lr_ref_number={{work_items[0]['lr_ref_number']}}">Return</a>
+        <a style="line-height: 70px; margin-left: 15px;" href="return-option?work_item_id={{work_items[0]['work_item_id']}}&lr_ref_number={{work_items[0]['lr_ref_number']}}">Return</a>
 
     </fieldset>
   </div>
