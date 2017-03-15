@@ -173,35 +173,35 @@
                   <legend class="visually-hidden">Please select a filter for the data</legend>
 
                   <label class="block-label selection-button-radio" for="radio-inline-1">
-                    <input id="radio-inline-1" type="radio" name="radio-inline-group" value="New"  checked>
-                    New
-                  </label>
-                  <label class="block-label selection-button-radio" for="radio-inline-2">
-                    <input id="radio-inline-2" type="radio" name="radio-inline-group" value="In-workflow-now" >
+                    <input id="radio-inline-1" type="radio" name="radio-inline-group" value="In-workflow-now">
                     In workflow now
                   </label>
-                  <label class="block-label selection-button-radio" for="radio-inline-3">
-                    <input id="radio-inline-3" type="radio" name="radio-inline-group" value="Available-now" >
+                  <label class="block-label selection-button-radio" for="radio-inline-2">
+                    <input id="radio-inline-2" type="radio" name="radio-inline-group" value="Available-now">
                     Available now
                   </label>
-                  <label class="block-label selection-button-radio" for="radio-inline-4">
-                    <input id="radio-inline-4" type="radio" name="radio-inline-group" value="In-progress-now" >
+                  <label class="block-label selection-button-radio" for="radio-inline-3">
+                    <input id="radio-inline-3" type="radio" name="radio-inline-group" value="In-progress-now">
                     In progress now
                   </label>
+                  <label class="block-label selection-button-radio" for="radio-inline-4">
+                    <input id="radio-inline-4" type="radio" name="radio-inline-group" value="New-today" checked>
+                    New today
+                  </label>
                   <label class="block-label selection-button-radio" for="radio-inline-5">
-                    <input id="radio-inline-5" type="radio" name="radio-inline-group" value="Processed-today" >
+                    <input id="radio-inline-5" type="radio" name="radio-inline-group" value="Processed-today">
                     Processed today
                   </label>
                   <label class="block-label selection-button-radio" for="radio-inline-6">
-                    <input id="radio-inline-6" type="radio" name="radio-inline-group" value="Completed-today" >
+                    <input id="radio-inline-6" type="radio" name="radio-inline-group" value="Completed-today">
                     Completed today
                   </label>
                   <label class="block-label selection-button-radio" for="radio-inline-7">
-                    <input id="radio-inline-7" type="radio" name="radio-inline-group" value="Deferred-today" >
+                    <input id="radio-inline-7" type="radio" name="radio-inline-group" value="Deferred-today">
                     Deferred today
                   </label>
                   <label class="block-label selection-button-radio" for="radio-inline-8">
-                    <input id="radio-inline-8" type="radio" name="radio-inline-group" value="Returned-today" >
+                    <input id="radio-inline-8" type="radio" name="radio-inline-group" value="Returned-today">
                     Returned today
                   </label>
 
@@ -213,7 +213,7 @@
 
     <div class="column-one-third">
 
-        <h2 class="heading-medium" id="types">New Cases</h2>
+        <h2 class="heading-medium" id="types">New Cases today</h2>
         <div class="data-box today">
 
             <div class="data">
@@ -262,8 +262,8 @@
         document.getElementById('filtered-vlo').innerHTML = vlo
         document.getElementById('filtered-deferred').innerHTML = deferred
 
-        if (type == "New"){
-            title = type.split('-').join(' ') + " cases"
+        if (type == "New-today"){
+            title = 'New cases today'
         }
         else {
             title = "Cases " + type.split('-').join(' ')
@@ -278,7 +278,7 @@
         rads[i].onclick = function() {
             value = this.getAttribute('value')
             switch (value) {
-            case 'New':
+            case 'New-today':
                 changeVals(430, 200, 100, 130, value)
                 break
             case 'Available-now':
