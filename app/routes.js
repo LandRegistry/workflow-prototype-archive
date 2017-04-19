@@ -142,7 +142,7 @@ router.get('/search/return', function (req, res) {
 
 router.get('/choose-categories/obtain', function (req, res) {
 
-  var cat = req.query.radio_contact_group;
+  var cat = req.query.cat_choice;
 
   res.render('choose-categories/obtain', {'cat': cat})
 })
