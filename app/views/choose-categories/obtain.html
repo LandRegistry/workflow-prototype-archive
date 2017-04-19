@@ -12,9 +12,17 @@
 
 
       <h1 class="heading-large">My Worklist</h1>
-        <p>There are currently no cases in your worklist. Your assigned work category is <b>{{ cat }}</b>.</p>
+        <p>There are currently no cases in your worklist.
+        {% if cat == 'None' %}
+            You have not selected a work category
+        {% else %}
+            Your assigned work category is <b>{{ cat }}</b>
+        {% endif %}.</p>
           <p>
-            <a class="button button-start" href="allocation-min.html" role="button">Obtain</a>
+            <a class="button button-start" href="allocation-min.html" role="button" {% if cat == 'None' %}disabled{% endif %} >Obtain</a>
+          </p>
+          <p>
+              <a href="no_cat">Change work category</a>
           </p>
 
     </div>
