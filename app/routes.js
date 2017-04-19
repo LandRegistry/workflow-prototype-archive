@@ -140,4 +140,11 @@ router.get('/search/return', function (req, res) {
 
 });
 
+router.get('/choose-categories/obtain', function (req, res) {
+
+  var cat = req.query.radio_contact_group;
+
+  res.render('choose-categories/obtain', {'cat': cat})
+})
+
 module.exports = router;

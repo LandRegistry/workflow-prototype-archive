@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Cora Redirection
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+    .multiple-choice {
+    display: block;
+    float: none;
+    clear: left;
+    position: relative;
+    padding: 0 0 0 38px;
+    margin-bottom: 10px;
+}
+
+.multiple-choice input {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    z-index: 1;
+    margin: 0;
+    zoom: 1;
+}
+
+.multiple-choice label {
+    cursor: pointer;
+    padding: 8px 10px 9px 12px;
+    display: block;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+</style>
+
+<main id="content" role="main">
+
+    <div class="content-wrapper">
+        <h1 class="heading-large">
+            My Worklist
+        </h1>
+        <p>
+            You are not currently assigned a work category, please select one.
+        </p>
+
+        <div class="grid-row">
+            <div class="column-one-half">
+                <div class="form-group">
+
+                    <form action="obtain">
+
+                        <fieldset>
+
+                          <legend class="visually-hidden">How do you want to be contacted?</legend>
+
+                          <div class="multiple-choice" data-target="contact-by-email">
+                            <input id="example-contact-by-email" type="radio" name="radio_contact_group" value="VCO" checked="checked">
+                            <label for="example-contact-by-email">VCO</label>
+                          </div>
+
+                          <div class="multiple-choice" data-target="contact-by-phone">
+                            <input id="example-contact-by-phone" type="radio" name="radio_contact_group" value="VRU">
+                            <label for="example-contact-by-phone">VRU</label>
+                          </div>
+
+                          <div class="multiple-choice" data-target="contact-by-text">
+                            <input id="example-contact-by-text" type="radio" name="radio_contact_group" value="Avaliable Deferrals">
+                            <label for="example-contact-by-text">Available Deferrals</label>
+                          </div>
+
+                        </fieldset>
+
+                        <input type="submit" value="Select" class="button">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</main>
+
+{% endblock %}
