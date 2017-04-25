@@ -1,0 +1,713 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+
+
+
+<style type="text/css">
+    .data {
+/*        margin-left: 15px;*/
+    }
+
+    .data-box {
+        background-color: #DEE0E2;
+        padding: 15px;
+/*        border: #005ea5;
+        border-width: 5px;
+        border-style: solid;*/
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+
+    .data-box:hover {
+        background-color: #BFC1C3;
+    }
+
+    .data-item {
+        display: block;
+        line-height: 1;
+    }
+
+    .data-bar {
+        background-color: white;
+        padding-top: 5px;
+    }
+
+    .today {
+        background-color: lightgray;
+    }
+
+    .seperator-bottom {
+        padding-bottom: 5px;
+        border-bottom: solid 1px #bfc1c3;
+    }
+</style>
+
+<main id="content" role="main">
+
+<h1 class="heading-large">
+    Workflow Management
+</h1>
+<p><a href='#' class="show">Show all</a></p>
+<h2 class="heading-medium">Total Work: 1937 cases</h2>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+
+
+
+<div class="grid-row seperator-bottom">
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Yesterday</h2>
+        <div class="data-box">
+            <div class="data">
+                <span class="data-item bold-xsmall">Total</span>
+                <span class="data-item bold-xlarge">619</span>
+            </div>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            Completed
+                        </td>
+                        <td>
+                            487
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Returned
+                        </td>
+                        <td>
+                            51
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            81
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Start of today</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge">238</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Available
+                        </td>
+                        <td>
+                            133
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            In progress
+                        </td>
+                        <td>
+                            105
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="column-one-quarter">
+        <h2 class="heading-small">New cases today</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge">238</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td id='filtered-vru'>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td id="filtered-vlo">
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td id="filtered-deferred">
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Cases now</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge">272</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            133
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td>
+                            105
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            34
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<h2 class="heading-medium">Categories</h2>
+
+<div class="grid-row">
+    <div class="column-one-quarter">
+        <h2 class="heading-small">In workflow now</h2>
+        <div class="data-box">
+            <div class="data">
+                <span class="data-item bold-xsmall">Total</span>
+                <span class="data-item bold-xlarge">619</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td>
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="column-one-quarter">
+        <h2 class="heading-small">In progress now</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge">238</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td>
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Completed today</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge">238</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td>
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Processed today</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge">272</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td>
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="grid-row seperator-bottom">
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Deferred today</h2>
+        <div class="data-box">
+            <div class="data">
+                <span class="data-item bold-xsmall">Total</span>
+                <span class="data-item bold-xlarge">619</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td>
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Returned today</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge">238</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td>
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<h2 class="heading-medium">Caseworkers</h2>
+
+<div class="grid-row">
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Allocated</h2>
+        <div class="data-box">
+            <div class="data">
+                <span class="data-item bold-xsmall">Total</span>
+                <span class="data-item bold-xlarge">619</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            487
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td>
+                            51
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Actionable deferrals
+                        </td>
+                        <td>
+                            81
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<!-- <div class="grid-row">
+
+    <div class="column-one-third">
+    <br>
+        Filter - Checkboxes/radios/dropdown/tabs?
+    </div> -->
+
+<!--     <div class="column-one-third">
+
+        <h2 class="heading-medium">Staff</h2>
+        <div class="data-box today">
+
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge" id='filtered-total'>430</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td id='filtered-vru'>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td id="filtered-vlo">
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td id="filtered-deferred">
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div> -->
+
+<!--     <div class="column-one-third">
+
+        <h2 class="heading-medium" id="types">Work now</h2>
+        <div class="data-box today">
+
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge" id='filtered-total'>430</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td id='filtered-vru'>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td id="filtered-vlo">
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td id="filtered-deferred">
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="column-one-third">
+
+        <h2 class="heading-medium" id="types">Work today</h2>
+        <div class="data-box today">
+
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge" id='filtered-total'>430</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td id='filtered-vru'>
+                            200
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VLO
+                        </td>
+                        <td id="filtered-vlo">
+                            100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td id="filtered-deferred">
+                            130
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div> -->
+
+<script type="text/javascript">
+
+    var show
+
+    $(document).ready(function() {
+        $('table').toggle(false)
+        show = false
+    })
+
+    $('.data-box').click(function() {
+        $(this).find('table').toggle()
+    })
+
+    $('.show').click(function() {
+        if (show == true) {
+            $('table').toggle(false)
+            $('.show').text('Show all')
+            show = false
+        }
+        else {
+            $('table').toggle(true)
+            $('.show').text('Hide all')
+            show = true
+        }
+    })
+
+</script>
+
+<script>
+
+//     function changeVals(total, vru, vlo, deferred, type) {
+//         document.getElementById('filtered-total').innerHTML = total
+//         document.getElementById('filtered-vru').innerHTML = vru
+//         document.getElementById('filtered-vlo').innerHTML = vlo
+//         document.getElementById('filtered-deferred').innerHTML = deferred
+
+//         if (type == "New-today"){
+//             title = 'New cases today'
+//         }
+//         else {
+//             title = "Cases " + type.split('-').join(' ')
+//         }
+
+//         document.getElementById('types').innerHTML = title
+//     }
+
+//     var rads = document.forms['filterForm'].elements['radio-inline-group']
+
+//     for (var i=0, len=rads.length; i<len; i++) {
+//         rads[i].onclick = function() {
+//             value = this.getAttribute('value')
+//             switch (value) {
+//             case 'New-today':
+//                 changeVals(430, 200, 100, 130, value)
+//                 break
+//             case 'Available-now':
+//                 changeVals(200, 50, 79, 71, value)
+//                 break
+//             case 'Processed-today':
+//                 changeVals(978, 333, 369, 278, value)
+//                 break
+//             case 'Completed-today':
+//                 changeVals(384, 100, 243, 45, value)
+//                 break
+//             case 'Deferred-today':
+//                 changeVals(500, 213, 90, 197, value)
+//                 break
+//             case 'Returned-today':
+//                 changeVals(94, 20, 38, 36, value)
+//                 break
+//             case 'In-progress-now':
+//                 changeVals(637, 290, 89, 258, value)
+//                 break
+//             case 'In-workflow-now':
+//                 changeVals(837, 340, 168, 329, value)
+//                 break
+//         }
+//     }
+// }
+
+</script>
+
+</main>
+
+{% endblock %}
