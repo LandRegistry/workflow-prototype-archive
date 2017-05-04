@@ -52,16 +52,22 @@
 <h1 class="heading-large">
     Workflow Management
 </h1>
-<p><a href='#' class="show">Show all</a></p>
-<h2 class="heading-medium">Total Work: 1937 cases</h2>
+<p>Last refreshed: Sometime today</p>
+<button class="show button">Show all</button>
 
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 
-
-
+<div class="grid-row">
+    <div class="column-one-half">
+        <h2 class="heading-medium" style="float: left">Overview</h2>
+    </div>
+    <div class="column-one-half">
+        <h2 class="heading-medium" style="float: right">Total work: 1957</h2>
+    </div>
+</div>
 
 <div class="grid-row seperator-bottom">
     <div class="column-one-quarter">
@@ -139,7 +145,7 @@
         <div class="data-box">
             <div class="data">
                     <span class="data-item bold-xsmall">Total</span>
-                    <span class="data-item bold-xlarge">238</span>
+                    <span class="data-item bold-xlarge">438</span>
             </div>
             <table>
                 <tbody>
@@ -148,15 +154,15 @@
                             VRU
                         </td>
                         <td id='filtered-vru'>
-                            200
+                            100
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
-                        <td id="filtered-vlo">
-                            100
+                        <td id="filtered-VCO">
+                            130
                         </td>
                     </tr>
                     <tr>
@@ -164,7 +170,7 @@
                             Deferred
                         </td>
                         <td id="filtered-deferred">
-                            130
+                            208
                         </td>
                     </tr>
                 </tbody>
@@ -173,7 +179,90 @@
 
     </div>
     <div class="column-one-quarter">
-        <h2 class="heading-small">Cases now</h2>
+        <h2 class="heading-small">Available now</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total</span>
+                    <span class="data-item bold-xlarge">772</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            333
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VCO
+                        </td>
+                        <td>
+                            325
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            114
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<h2 class="heading-medium">Today's work</h2>
+
+<div class="grid-row seperator-bottom">
+<div class="column-one-quarter">
+        <h2 class="heading-small">Completed</h2>
+        <div class="data-box">
+            <div class="data">
+                    <span class="data-item bold-xsmall">Total </span>
+                    <span class="data-item bold-xlarge">234</span>
+            </div>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            VRU
+                        </td>
+                        <td>
+                            38
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            VCO
+                        </td>
+                        <td>
+                            72
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deferred
+                        </td>
+                        <td>
+                            124
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="column-one-quarter">
+        <h2 class="heading-small">Processed</h2>
         <div class="data-box">
             <div class="data">
                     <span class="data-item bold-xsmall">Total</span>
@@ -186,15 +275,15 @@
                             VRU
                         </td>
                         <td>
-                            133
+                            73
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
                         <td>
-                            105
+                            95
                         </td>
                     </tr>
                     <tr>
@@ -202,24 +291,19 @@
                             Deferred
                         </td>
                         <td>
-                            34
+                            104
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-</div>
-
-<h2 class="heading-medium">Categories</h2>
-
-<div class="grid-row">
     <div class="column-one-quarter">
-        <h2 class="heading-small">In workflow now</h2>
+        <h2 class="heading-small">Deferred</h2>
         <div class="data-box">
             <div class="data">
                 <span class="data-item bold-xsmall">Total</span>
-                <span class="data-item bold-xlarge">619</span>
+                <span class="data-item bold-xlarge">295</span>
             </div>
             <table>
                 <tbody>
@@ -228,15 +312,15 @@
                             VRU
                         </td>
                         <td>
-                            200
+                            161
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
                         <td>
-                            100
+                            120
                         </td>
                     </tr>
                     <tr>
@@ -244,7 +328,7 @@
                             Deferred
                         </td>
                         <td>
-                            130
+                            14
                         </td>
                     </tr>
                 </tbody>
@@ -254,7 +338,7 @@
     </div>
 
     <div class="column-one-quarter">
-        <h2 class="heading-small">In progress now</h2>
+        <h2 class="heading-small">Returned</h2>
         <div class="data-box">
             <div class="data">
                     <span class="data-item bold-xsmall">Total</span>
@@ -267,15 +351,15 @@
                             VRU
                         </td>
                         <td>
-                            200
+                            100
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
                         <td>
-                            100
+                            50
                         </td>
                     </tr>
                     <tr>
@@ -283,99 +367,25 @@
                             Deferred
                         </td>
                         <td>
-                            130
+                            88
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-    </div>
-
-    <div class="column-one-quarter">
-        <h2 class="heading-small">Completed today</h2>
-        <div class="data-box">
-            <div class="data">
-                    <span class="data-item bold-xsmall">Total</span>
-                    <span class="data-item bold-xlarge">238</span>
-            </div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            VRU
-                        </td>
-                        <td>
-                            200
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            VLO
-                        </td>
-                        <td>
-                            100
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Deferred
-                        </td>
-                        <td>
-                            130
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-    </div>
-    <div class="column-one-quarter">
-        <h2 class="heading-small">Processed today</h2>
-        <div class="data-box">
-            <div class="data">
-                    <span class="data-item bold-xsmall">Total</span>
-                    <span class="data-item bold-xlarge">272</span>
-            </div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            VRU
-                        </td>
-                        <td>
-                            200
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            VLO
-                        </td>
-                        <td>
-                            100
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Deferred
-                        </td>
-                        <td>
-                            130
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
 </div>
+
+<h2 class="heading-medium">Work now</h2>
 
 <div class="grid-row seperator-bottom">
     <div class="column-one-quarter">
-        <h2 class="heading-small">Deferred today</h2>
+        <h2 class="heading-small">In workflow</h2>
         <div class="data-box">
             <div class="data">
                 <span class="data-item bold-xsmall">Total</span>
-                <span class="data-item bold-xlarge">619</span>
+                <span class="data-item bold-xlarge">1048</span>
             </div>
             <table>
                 <tbody>
@@ -384,15 +394,15 @@
                             VRU
                         </td>
                         <td>
-                            200
+                            532
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
                         <td>
-                            100
+                            328
                         </td>
                     </tr>
                     <tr>
@@ -400,7 +410,7 @@
                             Deferred
                         </td>
                         <td>
-                            130
+                            188
                         </td>
                     </tr>
                 </tbody>
@@ -410,11 +420,11 @@
     </div>
 
     <div class="column-one-quarter">
-        <h2 class="heading-small">Returned today</h2>
+        <h2 class="heading-small">In progress</h2>
         <div class="data-box">
             <div class="data">
                     <span class="data-item bold-xsmall">Total</span>
-                    <span class="data-item bold-xlarge">238</span>
+                    <span class="data-item bold-xlarge">738</span>
             </div>
             <table>
                 <tbody>
@@ -423,15 +433,15 @@
                             VRU
                         </td>
                         <td>
-                            200
+                            331
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
                         <td>
-                            100
+                            219
                         </td>
                     </tr>
                     <tr>
@@ -439,7 +449,7 @@
                             Deferred
                         </td>
                         <td>
-                            130
+                            188
                         </td>
                     </tr>
                 </tbody>
@@ -447,6 +457,8 @@
         </div>
 
     </div>
+
+
 </div>
 
 <h2 class="heading-medium">Caseworkers</h2>
@@ -457,7 +469,7 @@
         <div class="data-box">
             <div class="data">
                 <span class="data-item bold-xsmall">Total</span>
-                <span class="data-item bold-xlarge">619</span>
+                <span class="data-item bold-xlarge">120</span>
             </div>
             <table>
                 <tbody>
@@ -466,15 +478,15 @@
                             VRU
                         </td>
                         <td>
-                            487
+                            40
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
                         <td>
-                            51
+                            50
                         </td>
                     </tr>
                     <tr>
@@ -482,7 +494,7 @@
                             Actionable deferrals
                         </td>
                         <td>
-                            81
+                            30
                         </td>
                     </tr>
                 </tbody>
@@ -520,9 +532,9 @@
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
-                        <td id="filtered-vlo">
+                        <td id="filtered-VCO">
                             100
                         </td>
                     </tr>
@@ -563,9 +575,9 @@
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
-                        <td id="filtered-vlo">
+                        <td id="filtered-VCO">
                             100
                         </td>
                     </tr>
@@ -604,9 +616,9 @@
                     </tr>
                     <tr>
                         <td>
-                            VLO
+                            VCO
                         </td>
-                        <td id="filtered-vlo">
+                        <td id="filtered-VCO">
                             100
                         </td>
                     </tr>
@@ -656,10 +668,10 @@
 
 <script>
 
-//     function changeVals(total, vru, vlo, deferred, type) {
+//     function changeVals(total, vru, VCO, deferred, type) {
 //         document.getElementById('filtered-total').innerHTML = total
 //         document.getElementById('filtered-vru').innerHTML = vru
-//         document.getElementById('filtered-vlo').innerHTML = vlo
+//         document.getElementById('filtered-VCO').innerHTML = VCO
 //         document.getElementById('filtered-deferred').innerHTML = deferred
 
 //         if (type == "New-today"){
