@@ -1,0 +1,478 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<style type="text/css">
+    .data {
+/*        margin-left: 15px;*/
+    }
+
+    .data-box {
+        color: white;
+        padding: 50px 5px 50px 5px;
+        cursor: pointer;
+        text-align: center;
+        height: 100px;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .large {
+        height: 220px;
+        padding-top: 160px;
+    }
+
+    .imp {
+        background-color: #28A197;
+    }
+
+    .sec-imp {
+        background-color: #005EA5;
+    }
+
+    .third-imp {
+        background-color: #D53880;
+    }
+
+    .least-imp {
+        background-color: #6F777B;
+    }
+
+    .data-item {
+        display: block;
+        line-height: 1;
+    }
+
+    .data-bar {
+        background-color: white;
+        padding-top: 5px;
+    }
+
+    .today {
+        background-color: lightgray;
+    }
+
+    .seperator-bottom {
+        padding-bottom: 5px;
+        border-bottom: solid 1px #bfc1c3;
+    }
+
+    .column-full {
+        padding: 0 15px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .plus-minus {
+        position: absolute;
+        bottom: 0;
+        right: 5%
+    }
+
+/*    .sec-imp-table tr {
+        background-color: #005EA5;
+    }*/
+
+    .imp-table td {
+        color: white;
+        font-size: 8;
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .imp-table-head th {
+        border-bottom: 5px solid black;
+    }
+</style>
+
+<main id="content" role="main">
+
+<h1 class="heading-large">
+    Workflow Management
+</h1>
+<h2 class="heading-medium">Last updated on Thursday 1st May 2090 at 11:56pm</h2>
+
+<div class="grid-row">
+
+    <div class="column-one-quarter">
+
+        <div class="grid-row">
+            <div class="column-full">
+
+                <div class="data-box sec-imp">
+                    <div class="bold-xlarge">
+                        238
+                    </div>
+                    <div class="bold-medium">
+                        Start of today
+                    </div>
+                    <span class="bold-large plus-minus">+</span>
+                </div>
+
+                <table>
+                    <thead class="imp-table-head">
+                        <tr>
+                            <th>
+                                Available
+                            </th>
+                            <th>
+                                133
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="imp-table sec-imp">
+                        <tr>
+                            <td>
+                                Vol change of ownership
+                            </td>
+                            <td>
+                                50
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vol register update
+                            </td>
+                            <td>
+                                50
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actionable Deferral requisition
+                            </td>
+                            <td>
+                                33
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead class="imp-table-head">
+                        <tr>
+                            <th>
+                                Unavailable
+                            </th>
+                            <th>
+                                105
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="imp-table sec-imp">
+                        <tr>
+                            <td>
+                                Vol change of ownership
+                            </td>
+                            <td>
+                                60
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vol register update
+                            </td>
+                            <td>
+                                40
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actionable Deferral requisition
+                            </td>
+                            <td>
+                                5
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="grid-row">
+            <div class="column-full">
+
+                <div class="data-box third-imp">
+                    <div class="bold-xlarge">
+                        438
+                    </div>
+                    <div class="bold-medium">
+                        New today
+                    </div>
+                    <span class="bold-large plus-minus">+</span>
+                </div>
+
+                <table>
+                    <tbody class="imp-table third-imp">
+                        <tr>
+                            <td>
+                                Vol change of ownership
+                            </td>
+                            <td>
+                                60
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vol register update
+                            </td>
+                            <td>
+                                40
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actionable Deferral requisition
+                            </td>
+                            <td>
+                                5
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="column-one-half">
+
+        <div class="data-box imp large">
+            <div class="bold-xlarge">
+                772
+            </div>
+            <div class="bold-xlarge">
+                Availabe
+            </div>
+            <span class="bold-large plus-minus">+</span>
+        </div>
+
+        <table>
+            <tbody class="imp-table imp">
+                <tr>
+                    <td>
+                        Vol change of ownership
+                    </td>
+                    <td>
+                        325
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Vol register update
+                    </td>
+                    <td>
+                        333
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Actionable Deferral requisition
+                    </td>
+                    <td>
+                      114
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="column-one-quarter">
+
+        <div class="grid-row">
+            <div class="column-full">
+
+                <div class="data-box least-imp">
+                    <div class="bold-xlarge">
+                        272
+                    </div>
+                    <div class="bold-medium">
+                        Processed today
+                    </div>
+                    <span class="bold-large plus-minus">+</span>
+                </div>
+
+                <table>
+                    <tbody class="imp-table least-imp">
+                        <tr>
+                            <td>
+                                Vol change of ownership
+                            </td>
+                            <td>
+                                95
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vol register update
+                            </td>
+                            <td>
+                                73
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actionable Deferral requisition
+                            </td>
+                            <td>
+                                104
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="grid-row">
+            <div class="column-full">
+
+                <div class="data-box least-imp">
+                    <div class="bold-xlarge">
+                        619
+                    </div>
+                    <div class="bold-medium">
+                        Processed yesterday
+                    </div>
+                    <span class="bold-large plus-minus">+</span>
+                </div>
+
+                <table>
+                    <tbody class="imp-table least-imp">
+                        <tr>
+                            <td>
+                                Vol change of ownership
+                            </td>
+                            <td>
+                                95
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vol register update
+                            </td>
+                            <td>
+                                73
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actionable Deferral requisition
+                            </td>
+                            <td>
+                                104
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+    var show
+
+    $(document).ready(function() {
+        $('table').toggle(false)
+        show = false
+    })
+
+    $('.data-box').click(function() {
+        if ($(this).parent().find('span').text() == "+")
+        {
+            $(this).parent().find('span').text("-")
+        } else {
+            $(this).parent().find('span').text("+")
+        }
+        $(this).parent().find('table').toggle()
+    })
+
+    $('.show').click(function() {
+        if (show == true) {
+            $('table').toggle(false)
+            $('.show').text('Show all')
+            show = false
+        }
+        else {
+            $('table').toggle(true)
+            $('.show').text('Hide all')
+            show = true
+        }
+    })
+
+</script>
+
+<script>
+
+//     function changeVals(total, Volume register update, Vol Change of Ownership, deferred, type) {
+//         document.getElementById('filtered-total').innerHTML = total
+//         document.getElementById('filtered-Volume register update').innerHTML = Volume register update
+//         document.getElementById('filtered-Vol Change of Ownership').innerHTML = Vol Change of Ownership
+//         document.getElementById('filtered-deferred').innerHTML = deferred
+
+//         if (type == "New-today"){
+//             title = 'New cases today'
+//         }
+//         else {
+//             title = "Cases " + type.split('-').join(' ')
+//         }
+
+//         document.getElementById('types').innerHTML = title
+//     }
+
+//     var rads = document.forms['filterForm'].elements['radio-inline-group']
+
+//     for (var i=0, len=rads.length; i<len; i++) {
+//         rads[i].onclick = function() {
+//             value = this.getAttribute('value')
+//             switch (value) {
+//             case 'New-today':
+//                 changeVals(430, 200, 100, 130, value)
+//                 break
+//             case 'Available-now':
+//                 changeVals(200, 50, 79, 71, value)
+//                 break
+//             case 'Processed-today':
+//                 changeVals(978, 333, 369, 278, value)
+//                 break
+//             case 'Completed-today':
+//                 changeVals(384, 100, 243, 45, value)
+//                 break
+//             case 'Deferred-today':
+//                 changeVals(500, 213, 90, 197, value)
+//                 break
+//             case 'Returned-today':
+//                 changeVals(94, 20, 38, 36, value)
+//                 break
+//             case 'In-progress-now':
+//                 changeVals(637, 290, 89, 258, value)
+//                 break
+//             case 'In-workflow-now':
+//                 changeVals(837, 340, 168, 329, value)
+//                 break
+//         }
+//     }
+// }
+
+</script>
+
+</main>
+
+{% endblock %}
