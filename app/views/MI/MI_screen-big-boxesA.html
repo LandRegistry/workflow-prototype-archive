@@ -83,6 +83,8 @@
         border-bottom: 5px solid white;
         padding-left: 5px;
         padding-right: 5px;
+        vertical-align: top;
+        text-align: right;
     }
 
     .imp-table-head th {
@@ -95,7 +97,7 @@
 <h1 class="heading-large">
     Workflow Management
 </h1>
-<h2 class="heading-medium">Last updated on Thursday 1st May 2090 at 11:56pm</h2>
+<h2 class="heading-medium" id ="localTime">Last updated on Thursday 1st May 2090 at 11:56pm</h2>
 
 <div class="grid-row">
 
@@ -106,84 +108,30 @@
 
                 <div class="data-box sec-imp">
                     <div class="bold-xlarge">
-                        238
+                        619
                     </div>
                     <div class="bold-medium">
-                        Start of today
+                        Total today
                     </div>
                     <span class="bold-large plus-minus">+</span>
                 </div>
 
                 <table>
-                    <thead class="imp-table-head">
+                    <tbody class="imp-table sec-imp">
                         <tr>
-                            <th>
+                            <td>
                                 Available
-                            </th>
-                            <th>
-                                133
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="imp-table sec-imp">
-                        <tr>
-                            <td>
-                                Vol change of ownership
                             </td>
                             <td>
-                                50
+                                95
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Vol register update
-                            </td>
-                            <td>
-                                50
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Actionable Deferral requisition
-                            </td>
-                            <td>
-                                33
-                            </td>
-                        </tr>
-                    </tbody>
-                    <thead class="imp-table-head">
-                        <tr>
-                            <th>
                                 Unavailable
-                            </th>
-                            <th>
-                                105
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="imp-table sec-imp">
-                        <tr>
-                            <td>
-                                Vol change of ownership
                             </td>
                             <td>
-                                60
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Vol register update
-                            </td>
-                            <td>
-                                40
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Actionable Deferral requisition
-                            </td>
-                            <td>
-                                5
+                                73
                             </td>
                         </tr>
                     </tbody>
@@ -282,6 +230,97 @@
     </div>
 
     <div class="column-one-quarter">
+
+        <div class="grid-row">
+            <div class="column-full">
+
+                <div class="data-box least-imp">
+                    <div class="bold-xlarge">
+                        238
+                    </div>
+                    <div class="bold-medium">
+                        Start of today
+                    </div>
+                    <span class="bold-large plus-minus">+</span>
+                </div>
+
+                <table>
+                    <thead class="imp-table-head">
+                        <tr>
+                            <th>
+                                Available
+                            </th>
+                            <th>
+                                133
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="imp-table least-imp">
+                        <tr>
+                            <td>
+                                Vol change of ownership
+                            </td>
+                            <td>
+                                50
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vol register update
+                            </td>
+                            <td>
+                                50
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actionable Deferral requisition
+                            </td>
+                            <td>
+                                33
+                            </td>
+                        </tr>
+                    </tbody>
+                    <thead class="imp-table-head">
+                        <tr>
+                            <th>
+                                Unavailable
+                            </th>
+                            <th>
+                                105
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="imp-table least-imp">
+                        <tr>
+                            <td>
+                                Vol change of ownership
+                            </td>
+                            <td>
+                                60
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vol register update
+                            </td>
+                            <td>
+                                40
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Actionable Deferral requisition
+                            </td>
+                            <td>
+                                5
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
 
         <div class="grid-row">
             <div class="column-full">
@@ -411,6 +450,7 @@
     })
 
 </script>
+
 
 </main>
 
